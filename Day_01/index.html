@@ -3,63 +3,77 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>🌟 My First HTML Page</title>
-
+    <title>🎨 My Cool Web Page</title>
 </head>
 
 <body>
-
     <header>
-
-        <h1>🌍 Welcome to My Site</h1>
-
-        <nav>
-
-            <a href="about">About Us</a> |
-
-            <a href="services">Services</a>
-
-        </nav>
-
+        <div class="container">
+            <h1>🌍 Welcome to My Site</h1>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about">About Us 💡</a></li>
+                    <li><a href="#services">Services 🔧</a></li>
+                    <li><a href="#blog">Blog 🖋️</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
- 
+    <main>
+        <section id="about">
+            <h2>👋 About Us</h2>
+            <p>We make learning HTML5 fun! 🎉 We build small, friendly tutorials and projects to help beginners.</p>
+        </section>
 
-    <section id="about">
+        <section id="services">
+            <h2>🔧 Services</h2>
+            <p>We offer workshops, one-on-one mentoring, and starter templates for learners.</p>
+            <ol>
+                <li>Hands-on workshops</li>
+                <li>Personal mentoring</li>
+            </ol>
+        </section>
 
-        <h2>👋 About Us</h2>
+        <article id="blog">
+            <h2>🖋️ Latest Blog Post</h2>
+            <p>Today we learned about semantic HTML! 🎈 Semantic elements make pages easier to read, navigate, and maintain.</p>
+        </article>
 
-        <p>We’re here to teach you HTML5 the fun way! 🎉</p>
+        <section id="learn">
+            <h2>🌟 Learnings</h2>
+            <h3>✨ Subheading 1</h3>
+            <h4>🎯 Subheading 2</h4>
+            <p>HTML is easy and fun! 🎈 Here are some topics to explore:</p>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ol>
+        </section>
 
-    </section>
+        <section id="favorites">
+            <h2>🍽️ Favorites</h2>
+            <p>Quick list of things we like:</p>
+            <ul>
+                <li>Apples 🍎</li>
+                <li>Bananas 🍌</li>
+            </ul>
+        </section>
 
- 
-
-    <section id="services">
-
-        <h2>🛠️ Our Services</h2>
-
-        <ul>
-
-            <li>Web Development 🌐</li>
-
-            <li>SEO Optimization 📈</li>
-
-        </ul>
-
-    </section>
-
- 
+        <section id="explore">
+            <h2>🔗 Explore</h2>
+            <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Click here to explore! 🌍</a></p>
+            <figure>
+                <img src="puppy.jpg" alt="A cute puppy 🐶" width="320" height="240">
+                <figcaption>A friendly puppy from our gallery.</figcaption>
+            </figure>
+        </section>
+    </main>
 
     <footer>
-
-        <p>© 2026.🧙‍♂️</p>
-
+        <p>👋 Thanks for visiting! © 2026</p>
     </footer>
 
 </body>

@@ -1,43 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>100 Days Fullstack - Day 03</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Practice</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-<!--working with css-->
- <table border="1px">
-    <thead>
-        <tr>
-        <th></th>
-        <th>Basic</th>
-        <th>Standard</th>
-        <th>Unlimited</th>
-</tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Price</td>
-            <td>$10/month</td>
-            <td>$20/month</td>
-            <td>$30/month</td>
-        </tr>
-        <tr>
-            <td>Storage</td>
-            <td>10GB</td>
-            <td>100GB</td>
-            <td>1TB</td>
-        </tr>
-        <tr>
-            <td>Support</td>
-            <td>Email Support</td>
-            <td>24/7 Phone Support</td>
-            <td>Dedicated Account Manager</td>
-        </tr>
-    </tbody>
-   </table>
+
+    <header class="site-header">
+        <h1>CSS Box Model Demo</h1>
+        <p>Understanding margin, padding, and borders through practice</p>
+    </header>
+
+    <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main class="container">
+        <section class="card">
+            <h2>Section One</h2>
+            <p>
+                This section demonstrates padding and borders. The space inside
+                the border is padding, while the space outside is margin.
+            </p>
+            <button>Learn More</button>
+        </section>
+
+        <section class="card">
+            <h2>Section Two</h2>
+            <p>
+                Background colors help visualize how the box model affects layout
+                and spacing between elements.
+            </p>
+            <button>Read Details</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 CSS Practice Project</p>
+    </footer>
+
 </body>
 </html>

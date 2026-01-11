@@ -1,0 +1,99 @@
+/*By ID*/
+<h1 id="title">Hello, DOM!</h1>
+<script>
+  const title = document.getElementById("title");
+  console.log(title.textContent); // Output: Hello, DOM!
+</script>
+/*By Class Name*/
+<p class="intro">Welcome!</p>
+<p class="intro">Let's learn the DOM.</p>
+<script>
+  const intros = document.getElementsByClassName("intro");
+  console.log(intros[0].textContent); // Output: Welcome!
+</script>
+/*By Tag Name*/
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<script>
+  const paragraphs = document.getElementsByTagName("p");
+  console.log(paragraphs.length); // Output: 2
+</script>
+/*By Query Selector*/
+<p id="info" class="highlight">Hello!</p>
+<script>
+  const info = document.querySelector("#info");
+  console.log(info.textContent); // Output: Hello!
+</script>
+/*By Query Selector All*/
+<p class="highlight">One</p>
+<p class="highlight">Two</p>
+<script>
+  const highlights = document.querySelectorAll(".highlight");
+  highlights.forEach(el => console.log(el.textContent));
+  // Output: One, Two
+</script>
+/*Modifying HTMl element with javaScript*/
+<h1 id="title">Old Title</h1>
+<script>
+  const title = document.getElementById("title");
+  title.textContent = "New Title"; // Updates text
+</script>
+/*Changing html structure*/
+<div id="container"></div>
+<script>
+  const container = document.getElementById("container");
+  container.innerHTML = "<p>Dynamic Content</p>"; // Adds a paragraph
+</script>
+/*Adding and Modifying Attributes using setAttributes*/
+<img id="image" src="placeholder.jpg">
+<script>
+  const image = document.getElementById("image");
+  image.setAttribute("src", "new-image.jpg"); // Updates the image source
+</script>
+/*changing css style*/
+<p id="text">Style Me!</p>
+<script>
+  const text = document.getElementById("text");
+  text.style.color = "blue"; // Changes text color
+  text.style.fontSize = "20px"; // Changes font size
+</script>
+
+/*adding and removing classes*/
+<p id="text" class="highlight">Styled Text</p>
+<script>
+  const text = document.getElementById("text");
+  text.classList.add("bold"); // Adds a class
+  text.classList.remove("highlight"); // Removes a class
+</script>
+/*Creating interactive element*/
+<p id="message">Click the button to change me!</p>
+<button id="btn">Click Me</button>
+<script>
+  const button = document.getElementById("btn");
+  const message = document.getElementById("message");
+
+  button.addEventListener("click", () => {
+    message.textContent = "You clicked the button!";
+  });
+</script>
+/*creating new element dynamically*/
+<ul id="list"></ul>
+<button id="add">Add Item</button>
+<script>
+  const list = document.getElementById("list");
+  const addButton = document.getElementById("add");
+
+  addButton.addEventListener("click", () => {
+    const newItem = document.createElement("li"); // Create new list item
+    newItem.textContent = "New Item"; // Set its text
+    list.appendChild(newItem); // Add it to the list
+  });
+</script>
+/*Listening for a Click Event*/
+<button id="alert">Show Alert</button>
+<script>
+  const alertButton = document.getElementById("alert");
+  alertButton.addEventListener("click", () => {
+    alert("Button clicked!");
+  });
+</script>

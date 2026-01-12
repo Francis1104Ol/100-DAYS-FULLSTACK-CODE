@@ -1,8 +1,8 @@
 /*By ID*/
 <h1 id="title">Hello, DOM!</h1>
 <script>
-  const title = document.getElementById("title");
-  console.log(title.textContent); // Output: Hello, DOM!
+  const titl = document.getElementById("title");
+  console.log(titl.textContent); // Output: Hello, DOM!
 </script>
 /*By Class Name*/
 <p class="intro">Welcome!</p>

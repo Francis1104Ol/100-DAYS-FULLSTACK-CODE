@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  transition: background-color 0.3s;
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; 
+}
+
+h1 {
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+button {
+  padding: 8px 14px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#hoverBox {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: lightgray;
+  text-align: center;
+}
+
+.counter p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .card {
+  background-color: #333;
+}
+
+#formFeedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tab-btn {
+  padding: 8px 12px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: #333;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+.faq-question {
+  cursor: pointer;
+  background: #eee;
+  padding: 10px;
+  margin: 0;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background: #fafafa;
+}

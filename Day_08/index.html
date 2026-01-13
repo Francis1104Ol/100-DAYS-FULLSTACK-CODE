@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events & Interactivity</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>JavaScript Event Handling Project</h1>
+
+  <!-- PART 1: Event Handling -->
+  <section class="card">
+    <h2>Event Handling Demo</h2>
+    <button id="clickBtn">Click Me</button>
+    <p id="clickMessage"></p>
+
+    <div id="hoverBox">Hover over me</div>
+  </section>
+
+  <!-- PART 2: Interactive Features -->
+  <section class="card">
+    <h2>Interactive Features</h2>
+
+    <!-- Feature 1: Dark Mode Toggle -->
+    <button id="themeToggle">Toggle Dark Mode</button>
+
+    <!-- Feature 2: Counter -->
+    <div class="counter">
+      <p id="counterValue">0</p>
+      <button id="addBtn">Increase</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </section>
+
+  <!-- PART 3: Form Validation -->
+  <section class="card">
+    <h2>Signup Form</h2>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="text" id="email" placeholder="Email Address">
+      <input type="password" id="password" placeholder="Password">
+      <button type="submit">Submit</button>
+      <p id="formFeedback"></p>
+    </form>
+  </section>
+
+  <!-- TABBED INTERFACE -->
+<section class="card">
+  <h2>Tabbed Interface</h2>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="tab1">HTML</button>
+    <button class="tab-btn" data-tab="tab2">CSS</button>
+    <button class="tab-btn" data-tab="tab3">JavaScript</button>
+  </div>
+
+  <div class="tab-content active" id="tab1">
+    <p>HTML structures the content of the web.</p>
+  </div>
+
+  <div class="tab-content" id="tab2">
+    <p>CSS styles and layouts the web.</p>
+  </div>
+
+  <div class="tab-content" id="tab3">
+    <p>JavaScript adds interactivity and logic.</p>
+  </div>
+</section>
+
+<!-- FAQ ACCORDION -->
+<section class="card">
+  <h2>FAQ Accordion</h2>
+
+  <div class="faq">
+    <h3 class="faq-question">What is JavaScript?</h3>
+    <p class="faq-answer">JavaScript is a programming language for the web.</p>
+  </div>
+
+  <div class="faq">
+    <h3 class="faq-question">What is DOM?</h3>
+    <p class="faq-answer">The DOM represents the structure of a webpage.</p>
+  </div>
+
+  <div class="faq">
+    <h3 class="faq-question">Why use event listeners?</h3>
+    <p class="faq-answer">They allow pages to react to user interactions.</p>
+  </div>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>

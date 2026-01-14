@@ -1,0 +1,111 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BASE BODY */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, sans-serif;
+}
+
+/* DARK MODE (DEFAULT) */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* LIGHT MODE */
+body.light {
+  background-color: #ffffff;
+  color: #121212;
+}
+
+/* CENTERED STACK */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #1e88e5;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* CARD FLIP */
+.card {
+  width: 260px;
+  height: 180px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* FLIPPED STATE */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* CARD SIDES */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* DARK MODE CARD */
+.card-front {
+  background-color: #1f1f1f;
+}
+
+.card-back {
+  background-color: #2e2e2e;
+  transform: rotateY(180deg);
+}
+
+/* LIGHT MODE CARD */
+body.light .card-front {
+  background-color: #e0e0e0;
+}
+
+body.light .card-back {
+  background-color: #cfcfcf;
+}
+.title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: center;
+}

@@ -32,9 +32,7 @@ const themeToggle = document.getElementById("themeToggle");
 themeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
 });
-themeToggle.addEventListener("click", function () {
-  document.body.classList.toggle("dark");
-});
+
 /* Feature 2: Counter */
 let counter = 0;
 

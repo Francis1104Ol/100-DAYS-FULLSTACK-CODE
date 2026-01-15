@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popular Hosting Options</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <header>
+    <h1>Popular Hosting Options</h1>
+    <p>Select a hosting platform to see more details</p>
+  </header>
+
+  <section class="table-section">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Platform</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr onclick="showDetails('GitHub Pages')">
+          <td>1</td>
+          <td>GitHub Pages</td>
+          <td>Static</td>
+        </tr>
+        <tr onclick="showDetails('Netlify')">
+          <td>2</td>
+          <td>Netlify</td>
+          <td>Static / JAMstack</td>
+        </tr>
+        <tr onclick="showDetails('Vercel')">
+          <td>3</td>
+          <td>Vercel</td>
+          <td>Static / Serverless</td>
+        </tr>
+        <tr onclick="showDetails('Firebase Hosting')">
+          <td>4</td>
+          <td>Firebase Hosting</td>
+          <td>Static / Dynamic</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div id="details" class="details-box">
+      <p>Select a hosting option above to see details here.</p>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

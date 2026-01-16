@@ -13,6 +13,19 @@
   </header>
 
   <section class="table-section">
+    <!-- Dropdown -->
+    <div class="dropdown">
+      <label for="hosting-select">Choose a hosting platform:</label>
+      <select id="hosting-select">
+        <option value="">--Select--</option>
+        <option value="GitHub Pages">GitHub Pages</option>
+        <option value="Netlify">Netlify</option>
+        <option value="Vercel">Vercel</option>
+        <option value="Firebase Hosting">Firebase Hosting</option>
+      </select>
+    </div>
+
+    <!-- Table -->
     <table>
       <thead>
         <tr>
@@ -22,34 +35,20 @@
         </tr>
       </thead>
       <tbody>
-        <tr onclick="showDetails('GitHub Pages')">
+        <tr data-platform="GitHub Pages">
           <td>1</td>
           <td>GitHub Pages</td>
           <td>Static</td>
         </tr>
-        <tr onclick="showDetails('Netlify')">
+        <tr data-platform="Netlify">
           <td>2</td>
           <td>Netlify</td>
           <td>Static / JAMstack</td>
         </tr>
-        <tr onclick="showDetails('Vercel')">
-          <td>3</td>
-          <td>Vercel</td>
-          <td>Static / Serverless</td>
-        </tr>
-        <tr onclick="showDetails('Firebase Hosting')">
-          <td>4</td>
-          <td>Firebase Hosting</td>
-          <td>Static / Dynamic</td>
-        </tr>
-      </tbody>
-    </table>
+        </tbody>
+        </table>
+        </section>
+        </body>
+        </html>
+      
 
-    <div id="details" class="details-box">
-      <p>Select a hosting option above to see details here.</p>
-    </div>
-  </section>
-
-  <script src="main.js"></script>
-</body>
-</html>

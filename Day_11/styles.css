@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, serif;
+}
+
+body {
+  background-color:black;
+ background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8NDQ0NDQ0NDQ0NDQ0NBw0NDQ8NDQcNFREWFhURExMYHSggGBolGxUVITchJykvLi42Fx8zODMsQygtLisBCgoKDQ0NDg0NDysZFRk3Ny0tKysrNy0rNzcrKysrKystLTc3KysrKysrKysrKys3Ky0tKysrKysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAbAAADAQEBAQEAAAAAAAAAAAAAAgMBBAUHCP/EAC8QAAMBAQABAQYEBQUBAAAAAAABAgMREgQTITFRYZFicYGhMkGxwdEiQlJT8BT/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQIDBP/EABYRAQEBAAAAAAAAAAAAAAAAAAARAf/aAAwDAQACEQMRAD8A+mPT4i+0Ob2hjs7x566HYr0IOxXZUqtWTdk3YjsIpVk6sm7EdFDuhKoR0I6CGqidUZVE6ooKolTCqJVQBTJVQXRKqAKZGmF0RqwC2Qtm3ZC7IrLohbNuznvQii6IXRmmhC9ArbojdC3oRqyLDVRGqFqyVWSqaqJVQtWSqyKeqJVZOrJ1ZFNVk6oV0K6Ipmxei9M6FN0XpnTCD9MOxfaHO9DPaHZwdDsR2Qegr0Au7EdkHoI9Cou7EdkHqI9QOh2I7Od6iPUIvViVZzvUStSi1WSqyNakq1ILVZG7JVsQvYLFrsjehC9jnvcLHRehz3qc97kL2IsXvU5r1I3qQvUixa9CF6Ea0JVoSrFa0I1oTrQjWhFVrQlWhKtCVWFilaEqsR0I6IsM6FdCuhWyKZsXpgykDA4OkjU/kgMUDezN6zOAffHqZ7U4XsY9jq4u56iVqcT2Ee4HZWoj1OOtidbhHY9ib2OKtyVbgjvrYnW5wVuSrcEehW5Ktzz63J1uCO+tyVbnBW5Ktwsd17kb3OKtyNbEI7L3Oe9zlrYjWoqx03sRvU560J1oSrFq0I1oSrQlWhFitaEq0JVoSqwsVrQlWhN0I6JVh6om6FbMIpmxegb4/P3f3IFN4HfkHANA1SOpAVIdSOpHmCoRSN4FpzHWYH0x7ivc81+oFe5th6T3Erc81+oFfqCkejW5Otzzq9QTrcEehW5KtzgrcnW4SO6tydbnDWwj2Cx2VuTrY43qJWoI6q2J1scr0EehKR01qTrQ53oJVkqxetCVaEasR2BWtCdaEqoSqIqlWSqxXRNsLDOhHRjYrZFa2KNMtviTb+SXS69Lxd0pQvvT/QDmK+xaXa/0J/w9+N/kvixn6mZ92U8f/ZXvr9P5I52231ttv4tvrYDu0v4Vz8T97/T5Cf8An9TVI6kgVSOpHmCswBOYKTBWcysZlRKcysZlpzKzAEpzKezLTI3APRq2Te5apI3Bpkr3Ee4t5kazAq9xHuQqGTpMDpewj1OZt/JiugOh6ivQj0wCj0FdiBwDXYrZvA4ArYrY7QrQE2IyjQrRFTYjLeyfy+/uD2Hza/T3gczM534e/wDI61nC+v5sHqpXu5K+xItc8+lp/H/Svr/gqsM4Xaff2RHX1v8AKff9X8DlqnT6335fQE126eu57s5SXz5xfY5Kp0+0239TEiikLCqR5kaZKzBBOYKzBSYKzAE5zLTmUmCswBOcyswOpGKCYHSF6Y6AfpnkTdiOyD3WTpCvUV6HRyFIm5NdiuwFqSdQUdiOwJOBHmVdiOwqbzQvsx3Yj0Ax5meAPUnWxBTxMaI1sTrcLHQ+CNo5a3EerBHW7X0EexzdbJXvM/Guv5L3kqx1PYS9ee9tI4b9U3/CvH6/Fkn1+9tt/UlWOq/V/wDFd+r/AMEHTr4vv9gmSkyRoikopHmSkwAkwVmB5grMBCTBWYHmCsyAkwVmAQ3QNSG6J0PICnkZ5E3QjsCroV2RqydaAXrQk9CFaEnoB73tRXqeX/8Aa/l+4r9d+H9zdYj1HsK9jy3678L+4r9b+F/cVY9R7CVseW/WfR/cR+s+jFI9R7k63PMfqvo/uI/U/T9yUj0nuTrc89+ofy/cV+ofyX7irHe9xHqzhfqK+n2Ee9/8n+nF/QlI9DrYlWl8aS/X3nnOm/i2/wA22ZwVY7q9TC+dfkuf1J16x/7ZS/P3s5khlJKsbWlV/FTf0/l9gUjKR5kBVJSZGmSkyAsyUmB5grMhCTBWZGmSiQGTJRIxMOgOb0TyM8gKdDyJ+QroCvkY6IuydaAXqydaEK0J1oBatCdaEK0EdgVrQm6JuhfIK7WxWBjNMsYrGYrIpWKxmYAjRnBzGiBGjGh+BwCXDPErwPEKl4mqSqk1SBNSPMjpDJAKpHUjJDzIRkyUmTZkdAbMlEhEzegP0OieRnkBXpnkS8jHYFfIx0SdCOwLOxXoQdiVYFqsnVknYjoKpViOiboV0A7oV0K2YBrZnQADu6YZ03pUApoAK0ZwcAE4HBw4BPgcKcDgE+Bwpw3gE+G+I5oCqRkjTQBIZC9DoFOm9J9M6QV8g6S8jPICvkZ5EvIx0BV2K7JOhXQVV2I7JOhXQFHQrom6MbAd0K2L0wDWzDQAAAAAAAI6jeimlG9AwAGAU0DQMADQMABgFABg6KADdDonQ6A/Q6J0OkD9M8hPIzyCn8jPIm6MdAO6FdCNmdAZ0Y6FbF6AzZjZgAAAaBhoAAAABAAAAABgHSAAUaAAAdNAAAAAADoAAdAAIM6HQADOmdAAo8hfIAAx0Y6AAF6Z00AM6Z0AIMNRgFGgABAAAAAAAAAAAAABpgAB/9k=");
+ background-repeat: no-repeat;
+ background-size: cover;
+  min-height: 100vh;
+}
+.card-right {
+  flex: 1;
+  background-color: #dff3f0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-user {
+  align-self: flex-end;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.new-user a {
+  color: #3c04d5;
+  text-decoration: none;
+}
+.btn {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background-color: goldenrod;
+}
+/* Footer link */
+.terms {
+  margin-top: auto;
+  font-size: 12px;
+  color: #3c04d5;
+  text-decoration: underline;
+}
+
+/* Header */
+.logo {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.logo h1 {
+  font-size: 66px;
+  color: whitesmoke;
+  font-style: oblique;
+  font-display: fallback;
+}
+/* Centering the card */
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Main Card */
+.card {
+  display: flex;
+  width: 900px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+/* Left Section */
+.card-left {
+  flex: 1;
+  padding: 50px;
+  padding-top: 100px ;
+}
+
+.card-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.card-left p {
+  color: #6b6b6b;
+  line-height: 1.6;
+  max-width: 400px;
+}

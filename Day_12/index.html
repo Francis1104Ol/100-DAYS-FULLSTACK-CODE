@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 12 – Interactive Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Hosting Options Comparison</h2>
+
+  <table id="hostingTable">
+    <thead>
+      <tr>
+        <th>Provider</th>
+        <th>Type</th>
+        <th>Price / Month</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-details="Good for beginners, easy setup, shared resources.">
+        <td>Bluehost</td>
+        <td>Shared</td>
+        <td>$3.95</td>
+      </tr>
+      <tr data-details="High performance, scalable cloud hosting.">
+        <td>DigitalOcean</td>
+        <td>Cloud</td>
+        <td>$5.00</td>
+      </tr>
+      <tr data-details="Developer-friendly, great for full-stack apps.">
+        <td>Vercel</td>
+        <td>Serverless</td>
+        <td>Free / Paid</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="infoBox">
+    <p>Select a row to see more details.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

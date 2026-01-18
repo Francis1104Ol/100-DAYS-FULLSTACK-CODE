@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Day 13 – Interactive Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h2>Hosting Options Comparison</h2>
+
+  <table id="hostingTable">
+    <thead>
+      <tr>
+        <th>Provider</th>
+        <th>Type</th>
+        <th>Price / Month</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-details="Good for beginners, easy setup, shared resources.">
+        <td>Bluehost</td>
+        <td>Shared</td>
+        <td>$3.95</td>
+      </tr>
+
+      <tr data-details="High performance, scalable cloud hosting.">
+        <td>DigitalOcean</td>
+        <td>Cloud</td>
+        <td>$5.00</td>
+      </tr>
+
+      <tr data-details="Serverless hosting optimized for frontend frameworks and static sites.">
+        <td>Vercel</td>
+        <td>Serverless</td>
+        <td>Free / Paid</td>
+      </tr>
+
+      <tr data-details="Easy static site hosting with CI/CD from GitHub.">
+        <td>Netlify</td>
+        <td>Static / Serverless</td>
+        <td>Free / Paid</td>
+      </tr>
+
+      <tr data-details="Fast static site hosting directly from GitHub repositories.">
+        <td>GitHub Pages</td>
+        <td>Static</td>
+        <td>Free</td>
+      </tr>
+
+      <tr data-details="Google-backed hosting with CDN and backend services integration.">
+        <td>Firebase</td>
+        <td>Static / Backend</td>
+        <td>Free / Paid</td>
+      </tr>
+
+      <tr data-details="Platform-as-a-Service suitable for deploying full-stack applications.">
+        <td>Heroku</td>
+        <td>PaaS</td>
+        <td>Free / Paid</td>
+      </tr>
+
+      <tr data-details="AWS service for deploying full-stack and static web apps.">
+        <td>AWS Amplify</td>
+        <td>Cloud / Serverless</td>
+        <td>Free Tier</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <div id="infoBox">
+    <p>Select a row to see more details.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

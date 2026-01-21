@@ -118,7 +118,7 @@ nav a:hover {
   position: absolute;
   inset: 0;
   background: url("images/alex-tyson-K7yzYCEFQ-s-unsplash.jpg") center / cover no-repeat;
-  filter: blur(2px);
+  filter: blur(4px);
   transform: scale(1.1); /* prevents edge clipping */
   z-index: -2;
 }

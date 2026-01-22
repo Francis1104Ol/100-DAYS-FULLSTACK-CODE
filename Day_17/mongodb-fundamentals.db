@@ -10,7 +10,7 @@ show collections
 // Insert a document into a collection
 db.users.insertOne({
   name: "John Doe",
-  email: "john@example.com",
+  email: "john@gmail.com",
   age: 24,
   createdAt: new Date()
 })

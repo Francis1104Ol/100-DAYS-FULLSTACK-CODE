@@ -1,0 +1,46 @@
+// Show existing databases
+show databases
+
+// Create or switch to a database
+use intro_db
+
+// Show collections (empty at first)
+show collections
+
+// Insert a document into a collection
+db.users.insertOne({
+  name: "John Doe",
+  email: "john@example.com",
+  age: 24,
+  createdAt: new Date()
+})
+
+// Insert multiple documents
+db.users.insertMany([
+  { name: "Jane Smith", email: "jane@gmail.com", age: 28 },
+  { name: "Mike Brown", email: "mike@gmail.com", age: 31 }
+])
+
+// Find all documents
+db.users.find()
+
+// Find with filter
+db.users.find({ age: { $gt: 25 } })
+
+// Update a document
+db.users.updateOne(
+  { name: "John Doe" },
+  { $set: { age: 25 } }
+)
+
+// Delete a document
+db.users.deleteOne({ name: "Mike Brown" })
+
+// Drop a collection
+db.users.drop()
+db.orders.insertMany([
+  { userId: 1, item: "Laptop", price: 1200, quantity: 1, category: "Electronics" },
+  { userId: 2, item: "Keyboard", price: 100, quantity: 2, category: "Accessories" },
+  { userId: 1, item: "Mouse", price: 25, quantity: 3, category: "Accessories" },
+  { userId: 3, item: "Monitor", price: 300, quantity: 1, category: "Electronics" }
+]);

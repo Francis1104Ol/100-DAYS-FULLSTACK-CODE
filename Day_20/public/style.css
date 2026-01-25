@@ -1,0 +1,124 @@
+/* ===== Reset ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ===== Body ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at bottom, #020111 0%, #000000 70%);
+  position: relative;
+}
+
+/* ===== Star field ===== */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(1px 1px at 40% 70%, white, transparent),
+    radial-gradient(1.5px 1.5px at 60% 20%, white, transparent),
+    radial-gradient(2px 2px at 80% 60%, white, transparent),
+    radial-gradient(1px 1px at 10% 90%, white, transparent);
+  animation: stars 140s linear infinite;
+  opacity: 0.7;
+}
+
+body::after { animation-duration: 220s; opacity: 0.4; }
+
+@keyframes stars { from { transform: translateY(0); } to { transform: translateY(1000px); } }
+
+/* ===== Shooting stars ===== */
+.shooting-stars {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.shooting-stars span {
+  position: absolute;
+  width: 180px;
+  height: 2px;
+  background: linear-gradient(270deg, white, transparent);
+  opacity: 0;
+  animation: shoot 7s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+}
+
+.shooting-stars span:nth-child(1) { top: 15%; left: 100%; animation-delay: 0s; }
+.shooting-stars span:nth-child(2) { top: 30%; left: 100%; animation-delay: 2s; }
+.shooting-stars span:nth-child(3) { top: 50%; left: 100%; animation-delay: 4s; }
+.shooting-stars span:nth-child(4) { top: 65%; left: 100%; animation-delay: 6s; }
+.shooting-stars span:nth-child(5) { top: 80%; left: 100%; animation-delay: 8s; }
+
+@keyframes shoot {
+  0% { transform: translate(0,0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translate(-1100px, 700px); opacity: 0; }
+}
+
+/* ===== Form container ===== */
+.form-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* ===== Glassmorphism form ===== */
+form {
+  width: 360px;
+  padding: 30px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+}
+
+h2 { text-align: center; margin-bottom: 14px; color: #ffffff; font-weight: 600; }
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+input::placeholder { color: rgba(255,255,255,0.75); }
+
+input:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.3);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+button:hover { transform: translateY(-1px); }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shooting Star Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background shooting stars -->
+  <div class="shooting-stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Centered registration form -->
+  <div class="form-container">
+    <form id="registerForm">
+      <h2>Register</h2>
+      <input type="text" placeholder="First Name" required />
+      <input type="text" placeholder="Surname" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+
+  <!-- JS to submit form -->
+  <script>
+    const form = document.getElementById("registerForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        firstName: form[0].value,
+        surname: form[1].value,
+        email: form[2].value,
+        password: form[3].value,
+      };
+
+      try {
+        const res = await fetch("/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+        alert(result.message);
+
+        if (result.success) form.reset();
+      } catch (err) {
+        console.error(err);
+        alert("Something went wrong.");
+      }
+    });
+  </script>
+</body>
+</html>

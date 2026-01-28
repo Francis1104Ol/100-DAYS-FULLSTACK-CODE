@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini CMS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Mini Content Management System</h1>
+
+    <form id="postForm">
+      <input type="text" id="title" placeholder="Post title" required />
+      <textarea id="content" placeholder="Post content" required></textarea>
+      <input type="text" id="author" placeholder="Author name" required />
+      <button type="submit">Create Post</button>
+    </form>
+
+    <section id="posts"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

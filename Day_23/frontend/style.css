@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #f1f3f6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Submit button */
+form button {
+  background: #0077ff;
+  color: #fff;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: #005fd1;
+}
+
+/* Posts */
+.post {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 5px solid #0077ff;
+}
+
+.post h3 {
+  margin: 0 0 8px;
+  color: #222;
+}
+
+.post p {
+  margin: 0 0 10px;
+  color: #444;
+}
+
+.post small {
+  color: #777;
+}
+
+/* Action buttons */
+.post button {
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+.post button:first-of-type {
+  background: #ffc107;
+  color: #000;
+}
+
+.post button:first-of-type:hover {
+  background: #e0a800;
+}
+
+.post button:last-of-type {
+  background: #dc3545;
+  color: #fff;
+}
+
+.post button:last-of-type:hover {
+  background: #b52a37;
+}

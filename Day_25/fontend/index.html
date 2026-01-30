@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Car Selection Form</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<h2>Car Selection Form</h2>
+
+<form id="carForm">
+  <fieldset>
+    <legend>Personal Information</legend>
+
+    <label>Full Name</label>
+    <input type="text" id="name" />
+    <small class="error" id="nameError"></small>
+
+    <label>Email</label>
+    <input type="email" id="email" />
+    <small class="error" id="emailError"></small>
+  </fieldset>
+
+  <fieldset>
+    <legend>Car Preferences</legend>
+
+    <label>Car Brand</label>
+    <select id="brand">
+      <option value="">Select brand</option>
+      <option value="Toyota">Toyota</option>
+      <option value="Honda">Honda</option>
+      <option value="BMW">BMW</option>
+      <option value="Tesla">Tesla</option>
+    </select>
+    <small class="error" id="brandError"></small>
+
+    <label><input type="checkbox" class="feature" value="Sunroof"> Sunroof</label>
+    <label><input type="checkbox" class="feature" value="Navigation"> Navigation</label>
+    <label><input type="checkbox" class="feature" value="Electric"> Electric</label>
+  </fieldset>
+
+  <button type="submit">Submit</button>
+</form>
+
+<script src="js/script.js"></script>
+</body>
+</html>

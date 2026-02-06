@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript">
+            function checkfield(){
+                if(document.regfrm.fname.value.length == 0){
+                    alert("fill firstname field")
+                    document.regfrm.fname.focus();
+                    return;
+                }
+                if(document.regfrm.lname.value.length == 0){
+                    alert("fill lastname field")
+                    document.regfrm.lname.focus();
+                    return;
+                }
+                if(document.regfrm.eid.value.length == 0){
+                    alert("fill email-id")
+                    document.regfrm.eid.focus();
+                    return;
+
+                }
+                if(document.regfrm.zip.value.length == 0){
+                    alert("fill zip field")
+                    document.regfrm.zip.focus();
+                    return;
+                }
+                if(document.regfrm.phonenumber.value.length==0){
+                    alert("fill phone number field")
+                    document.regfrm.phonenumber.focus();
+                    return;
+
+                }
+                else{
+                    alert("Successful");
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+        <center>
+            <form name="regfrm" method="post">
+                <p align = "center">
+                    <b>
+                        <i>
+                            <font face="monotype corsiva" color="black" size="7">
+                                <u>Personal Registration Form</u>
+                            </font>
+                        </i>
+                    </b>
+                </p>
+                <p align="center">
+                    <font face="arial" color="bluishgreen">
+                        <b>you must complete fields marked with </b>
+                    </font>
+                    <font color="bluishgreen" face="times new roman">
+
+                   *(star) </font>
+                </p>
+<table border="8" cellpadding="0" cellspacing="0" width="73%" height="10">
+    <tr>
+        <td width="43%" height="22"> First Name</td>
+        <td width="57%" height="22">
+            <input type="text" name="fname" size="20">
+            <font color="red">*</font>
+        </td>
+    </tr>
+    <tr>
+        <td width="43%" height="22">
+            <font face="times new roman" size="4">
+                lastname
+            </font>
+        </td>
+        <td width="57%" height="22">
+            <input type="text" name="1name" size="20">
+            <font color="red">*</font>
+        </td>
+    </tr>
+    <tr>
+        <td width="43%" height="22">
+            <font face="times new roman" size="4">
+                jobtitle
+            </font>
+        </td>
+        <td width="57%" height="22">
+            <font face="times new roman" size="20">
+                <select size="1" name="jobsinfo">
+                    <option value>choose.</option>
+                    <option value="Engineer">Engineer</option>
+                    <option value="Lecturer">Lecturer</option>
+                </select>
+
+            </font> </td>
+    </tr>
+    <tr>
+        <td width="43%" height="22">
+            <font face="times new roman" size="4">industry</font>
+        </td>
+
+    <td width="57%" height="22">
+        <font face="times new roman" size="20">
+            <select size="1" name="Industry">
+                <option value>Choose..</option>
+                <option value="Academic">Academic</option>
+                  <option value="Corporate">Corporate</option>
+                    <option value="Financial">Financial</option>
+                      <option value="Government"> Government</option>
+                        <option value="Military">Military</option>
+                          <option value="Research"> Research</option>
+                            <option value="Technology">Technology</option>
+                              <option value="Transportation">Transportation</option>
+            <select>
+        </font>
+    </td>
+    </tr>
+    <tr>
+        <td width="43%" height="22">
+            <font face="timesnewroman" size="4">
+                Email-id
+            </font>
+        </td>
+        <td width="57%" height="22">
+            <input type="text" name="eid" size="20">
+            <font color="red">*</font>
+        </td>
+    </tr>
+    <tr>
+        <td width="43%" height="22">
+            <font face="times new roman" size="4">
+                Country
+            </font>
+        </td>
+        <td width="43%" height="22">
+                <font face="times new roman" size="20">
+                    <select size="1" name="country">
+                        <option value>Choose..</option>
+                        <option value="Ethiopia">Ethiopia</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="Uganda">Uganda</option>
+                    </select>
+                    </font>
+        </td>
+</table>
+            </form>
+        </center>
+    </body>
+
+</html>

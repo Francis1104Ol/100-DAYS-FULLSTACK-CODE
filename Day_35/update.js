@@ -72,3 +72,10 @@ db.products.updateMany(
     {upsert:true}
     
  )
+
+
+ db.employees.updateMany(
+    {"skills.level": {$gte:2}},
+    {$set:{"skills.level.$[el].expert":true}},
+    {arraFilters:[{"el.level":{$gte:6}}]}
+ )

@@ -16,7 +16,26 @@ db.employees.aggregate([
 db.employees.aggregate([
     {$project:
         {_id:0,
-            name:{$concat:["$firstname", "", "$lastname"]},
+            name:{$concat:
+                [{$toUpper:"$firstname",},
+                " ", 
+                {$toUpper: "$lastname"}]},
       gender:1, 
       email:1}}
+])
+
+
+db.employees.aggregate([
+    {$project:{
+        _id:0,
+         name:{$concat:[
+                {$toUpper:{$substrCP:["$firstname", 0, 1]}},
+                {$substrCP:['$firstname', 1,{$substrCP:[{$strLenCP:"$firstname"},
+                    1]}]},
+                " ",
+                {$toUpper:{$substrCP:["lastname", 0, 1]}},
+                {$substrCP:['$lastname', 1,{$substract:[{$strLenCP:"$lastname"},1]}]},
+ ] },
+ gender:1,
+ email:1}}
 ])

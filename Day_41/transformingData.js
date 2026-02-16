@@ -86,5 +86,29 @@ db.employees.aggregate([
 
 //$bucket stage 
 db.employees.aggregate([
-    {$project:{_id:0, firstname:1, birthYear:{$isoWeekYear:{toDate:"$dob"}}}}
+    {$project:{_id:0, firstname:1, birthYear:{$isoWeekYear:{$toDate:"$dob"}}}},
+    {$bucket:{
+        groupBy:"$birthYear",
+        boundaries:[1960,1970,1980,1990,2000],
+        output:{
+            name:{$push: "$firstname"},
+            total:{$sum:1},
+            averageAge:{$avg:{$subtract:[2025, "$birthYear"]}}
+        }
+    }
+    }
+])
+//bucket auto
+db.employees.aggregate([
+    {$project:{_id:0, firstname:1, birthYear:{$isoWeekYear:{$toDate:"$dob"}}}},
+    {$bucketAuto:{
+        groupBy:"$birthYear",
+       buckets: 5,
+        output:{
+            name:{$push: "$firstname"},
+            total:{$sum:1},
+            averageAge:{$avg:{$subtract:[2025, "$birthYear"]}}
+        }
+    }
+    }
 ])

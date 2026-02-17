@@ -105,9 +105,16 @@ db.test.insertOne({name:'Joy', age:NumberLong('12345678999810')})
 db.test.updateOne({}, {$inc: {amount:NumberLong('-5')}})
 //working with floating numbers
 db.test.insertOne({num1:0.1, num2:0.3})
-db.test([{
-    $project:{result:{$subtract: '$num1', $num2}}
-}])
+db.test.aggregate([{
+    $project:{
+        result:
+        {$subtract: ['$num1', '$num2']}
+}}])
 
 
 db.test.insertOne({num1:NumberDecimal('0.1'), num2:NumberDecimal('0.3')})
+db.test.aggregate([{
+    $project:{
+        result:
+        {$subtract: ['$num1', '$num2']}
+}}])

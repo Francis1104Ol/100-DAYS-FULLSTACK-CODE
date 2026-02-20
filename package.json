@@ -1,0 +1,29 @@
+{
+  "name": "100-days-fullstack-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon /passingDataToServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Francis1104Ol/100-DAYS-FULLSTACK-CODE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Francis1104Ol/100-DAYS-FULLSTACK-CODE/issues"
+  },
+  "homepage": "https://github.com/Francis1104Ol/100-DAYS-FULLSTACK-CODE#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  },
+  "devDependencies": {
+    "nodemo": "^1.0.0"
+  }
+}

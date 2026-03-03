@@ -1,24 +1,24 @@
 {
   "name": "100-days-fullstack-code",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon /passingDataToServer.js"
+  "description": "learning expressJs with nodeJs",
+  "keywords": [],
+  "homepage": "https://github.com/Francis1104Ol/100-DAYS-FULLSTACK-CODE#readme",
+  "bugs": {
+    "url": "https://github.com/Francis1104Ol/100-DAYS-FULLSTACK-CODE/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Francis1104Ol/100-DAYS-FULLSTACK-CODE.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "Francis",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Francis1104Ol/100-DAYS-FULLSTACK-CODE/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon /passingDataToServer.js"
   },
-  "homepage": "https://github.com/Francis1104Ol/100-DAYS-FULLSTACK-CODE#readme",
   "dependencies": {
     "express": "^5.2.1"
   },

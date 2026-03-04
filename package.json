@@ -20,7 +20,8 @@
     "start:dev": "nodemon /passingDataToServer.js"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "morgan": "^1.10.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"

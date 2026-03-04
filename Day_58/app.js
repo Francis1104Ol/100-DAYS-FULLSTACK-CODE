@@ -3,6 +3,7 @@ const express = require('express');
 let app = express();
 const port = 1000
 const fs = require('fs');
+const morgan = require('morgan')
 //Route Handler Functions
 const getAllMovies = (req, res)=>{
     res.status(200).json({
@@ -34,6 +35,11 @@ const createMovie = (req, res) =>{
 let movies= JSON.parse(fs.readFileSync('./data/movies.json'))
 //Middleware
 app.use(express.json())
+app.use(morgan('dev'))
+//app.use(morgan('combined'))
+//app.use(morgan('common'))
+//app.use(morgan('short'))
+//app.use(morgan('tiny'))
 
 //GET - api/v1/movies -- For ROute parameter
 //app.get('/api/v1/movies/:id/:name/:x', (req, res) =>{  //the ? will make the route parameter optional
@@ -106,7 +112,7 @@ fs.writeFile('./data/movies.json', JSON.stringify(movies), (erre)=>{
 //Route Parameter are name url segments thaat are used to capture the values specified at their position
 //Custome middleware
 const logger =function(req, res, next){
-    console.log('custome middleware called')
+    console.log('custom middleware called')
     next()
     
 }
@@ -121,15 +127,18 @@ app.use(logger)
 
 // app.patch('/api/v1/movies/:id', updateMovie)
 // app.delete('/api/v1/movies/:id', deleteMovie )
-
+const movieRouter =express.Router();
+movieRouter.route()
 app.route('/api/v1/movies')
 .get(getAllMovies)
 .post(createMovie)
 
-app.route('/api/v1/movies/:id')
+movieRouter.route('/:id')
 .get(getMovie)
 .patch(updateMovie)
 .delete(deleteMovie)
+
+app.use('/api/v1/movies', movieRouter)// mounting route
 //Create a server 
 
 app.listen(port,()=>{
@@ -146,3 +155,5 @@ app.listen(port,()=>{
     
 // }
 // app.use(logger)
+
+//Using a third party middleware : Morgan allow to see requested data by writing it in the console

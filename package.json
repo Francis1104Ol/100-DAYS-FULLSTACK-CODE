@@ -14,10 +14,10 @@
   "license": "ISC",
   "author": "Francis",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon /passingDataToServer.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
     "express": "^5.2.1",

@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
-// const port = 1000
 const dotenv= require('dotenv')
 dotenv.config({path:'./config.env'})
-
 mongoose.connect(process.env.CONN_STR)
 .then(() => {
     console.log('DB connection Success');
@@ -18,11 +16,12 @@ const port = process.env.PORT || 1000;
 //     description: String,
 //     duration:Number,
 //     ratings:Number
-// }); another way of creating it 
+// }); 
+// another way of creating it 
 const movieSchema =new mongoose.Schema({
     name :{
         type: String,
-        required: [true, "Name is a required fiels"],
+        required: [true, "Name is a required field"],
         unique: true
     },
     description: String,
@@ -39,10 +38,14 @@ const movieSchema =new mongoose.Schema({
 const Movie =mongoose.model('movie', movieSchema) // model name must start with caps
 //creating document from model
 const testMovie = new Movie({
-    name: 'Die Hard',
-    description: "Action packed movie staring bruce willis in this trilling adventure.",
-    duration: 139,
-    ratings:4.5
+   // name: 'Die Hard',
+  //  description: "Action packed movie staring bruce willis in this trilling adventure.",
+  //  duration: 139,
+   // ratings:4.5
+   name: "Interstellar",
+   description: "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.",
+   duration:169,
+   ratings: 4.7
 })
 testMovie.save()
 .then(doc=>{

@@ -139,7 +139,7 @@ exports.getMovieStats = async(req, res) =>{
                 avgRatings:{$avg:'$ratings'},
                 avgPrice:{$avg: '$price'},
                 minPrice:{$min: '$price'},
-                maxprice:{$max: '$price'},
+                maxPrice:{$max: '$price'},
                 totalPrice:{$sum: '$price'},
                 movieCount:{$sum:1}
             } },

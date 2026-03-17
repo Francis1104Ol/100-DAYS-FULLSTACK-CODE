@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Inception",
+    "description": "A skilled thief who steals corporate secrets through dream-sharing technology is given a chance to erase his criminal history.",
+    "duration": 148,
+    "ratings": 4.8,
+    "totalRating": 1200,
+    "releaseYear": 2010,
+    "releaseDate": "2010-07-16",
+    "genres": ["Sci-Fi", "Action", "Thriller"],
+    "directors": ["Christopher Nolan"],
+    "coverImage": "inception.jpg",
+    "actors": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page"],
+    "price": 12.99
+  },
+  {
+    "name": "Interstellar",
+    "description": "A group of astronauts travel through a wormhole in search of a new home for humanity as Earth becomes uninhabitable.",
+    "duration": 169,
+    "ratings": 4.7,
+    "totalRating": 980,
+    "releaseYear": 2014,
+    "releaseDate": "2014-11-07",
+    "genres": ["Sci-Fi", "Adventure", "Drama"],
+    "directors": ["Christopher Nolan"],
+    "coverImage": "interstellar.jpg",
+    "actors": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+    "price": 14.99
+  },
+  {
+    "name": "The Dark Knight",
+    "description": "Batman faces the Joker, a criminal mastermind who plunges Gotham City into chaos and tests the limits of justice.",
+    "duration": 152,
+    "ratings": 4.9,
+    "totalRating": 1500,
+    "releaseYear": 2008,
+    "releaseDate": "2008-07-18",
+    "genres": ["Action", "Crime", "Drama"],
+    "directors": ["Christopher Nolan"],
+    "coverImage": "dark-knight.jpg",
+    "actors": ["Christian Bale", "Heath Ledger", "Gary Oldman"],
+    "price": 13.99
+  }
+]

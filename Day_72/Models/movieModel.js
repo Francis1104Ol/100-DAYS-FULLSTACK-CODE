@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
 const fs = require('fs')
+const validator = require('validator')
 const movieSchema =new mongoose.Schema({
     name :{
         type: String,
         required: [true, "Name is a required field"],
-        unique: true,
-        trim:true
+        unique: true,// unique is not a validator
+        trim:true,
+        maxLength:[100,"Movie name must not have more than 100 character"],
+        minLength:[4, "Movie name must not be less than 4"],//MINLENGTH AND MAXLENGTH CAN ONLY WORK ON TYE STRING
+        validate:[validator.isAlpha, "name should only contain an alphabet"] //THIRD PARTY VALIDATOR
     },
     description: {
         type: String,
@@ -18,6 +22,17 @@ const movieSchema =new mongoose.Schema({
     },
     ratings:{
         type:Number,
+        // min:[1, "Ratings must not be 1.0 or above"], //validator for type number
+        // max:[10, "Ratings must  be 10.0 or less"] built in validator
+        //custom validator
+        validate:{
+            validator:
+            function(value){
+           return value>=1 && value <=10;
+           
+        },
+        message:"Ratings ({VALUE}) should be above 1 or below 10"
+    }
     },
     totalRatings:{
         type:Number
@@ -36,8 +51,12 @@ const movieSchema =new mongoose.Schema({
     },
     genres:{
         type:[String],
-        required:[true, 'Genres is required']
-    },
+        required:[true, 'Genres is required'], // A DATA VALIDATOR
+        // enum: {// only on string types 
+        //     values:["Action", "Comedy", "Drama", "Thriller", "Horror", "Sci-Fi", "Romance", "Adventure"], //also a validator to indicate accepted genre
+        //     message:"This genre does not exit"
+        // }
+        },
     directors:{
         type:[String],
         required:[true, 'Directors is required']
@@ -64,11 +83,6 @@ movieSchema.virtual('durationInHours').get(function(){
     return this.duration/60;
 })
 
-//THIS IS DOCUMMENT MIDDLEWARE WHICH IS TAKING THE PRE : THIS WILL BE EXCUTED BEFORE THE DOCUMENT IS SAVE IN THE DATABASE
-//NEXT CALL THE NEXT MIDDLEWARE
-//THE SAVE WILL ONLY WORK FOR THE SAVE AND CREATE METHOD 
-//IT WON'T WORK FOR FINDBYIDANDUPDATE AND INSERTMANY
-//ON THE SAVE HOOK YOU CAN ADD AS MANY PRE AND POST MIDDLEWARE AS YOU WANT 
 movieSchema.pre('save', function(next) {
     this.createdBy= 'Francis'
     
@@ -77,8 +91,13 @@ movieSchema.pre('save', function(next) {
 movieSchema.post('save', function(doc){
     const content=`A new movie document with name ${doc.name} has been created by ${doc.createdBy}\n`;
     fs.writeFileSync('./log/log.txt', content,{flag:'a'}, (err)=>{
-        if (err) console.log(err.message)
+        console.log(err.message)
     })
+})
+
+//USING UNSHIFT ADD DATA TO THE BEGINNINIG OF AN ARRAY
+movieSchema.pre('aggregate', function(){
+    console.log(this.pipeline().unshift({$match:{releaseDate:{$lte:new Date()}}}))
 })
 const Movie =mongoose.model('movie', movieSchema);
 module.exports = Movie;

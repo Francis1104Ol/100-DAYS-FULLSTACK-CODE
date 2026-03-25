@@ -44,6 +44,6 @@ const token =  signToken(user._id)
     res.status(200).json({
         status: 'success',
         token
-      //  user i don't want to return the user details
+      //  user: i don't want to return the user details
     })
 })

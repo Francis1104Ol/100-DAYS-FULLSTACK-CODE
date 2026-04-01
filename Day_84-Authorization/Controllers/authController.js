@@ -87,7 +87,7 @@ next();
 exports.restrict = (role)=>{
     return(req, res, next)=>{
         if(req.user.role !== role){
-            const error = new CustomError('You do not have permission to perform this action', 403)
+            return next(new CustomError('You do not have permission to perform this action', 403))
         }
         next();
     }
@@ -96,7 +96,7 @@ exports.restrict = (role)=>{
 // // WHEN THERE'S MORE THAN 1 ROLES to perform an action 
 // exports.restrict = (...role)=>{
 //     return(req, res, next)=>{
-//         if(!req.includes(req.user.role)){
+//         if(!role.includes(req.user.role)){
 //             return next(new CustomError('You do not have permission to perform this action', 403))
 //         }
 //         next();

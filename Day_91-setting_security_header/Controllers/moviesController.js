@@ -1,8 +1,7 @@
 const Movie = require('../Models/movieModel')
-const {param} =require('../Models/movieModel')
 const asyncErrorHandler = require('../Utils/asyncErrorHandler')
 const ApiFeatures = require('../Utils/ApiFeatures')
-const customError=require('../Utils/CustomError').default
+const customError=require('../Utils/CustomError')
 exports.getHighestRated=(req, res, next)=>{
             req.query.limit ='5';
          req.query.sort='-ratings'

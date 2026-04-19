@@ -71,6 +71,22 @@ function Car(make, year, model, color){
     this.year= year,
     this.model = model,
     this.color = color
+    this.drive = function(){console.log(`You drive the ${this.model}`)}
 }
 const car1 = ("Hyundai", 2024, "Sonata", "Grey")
 const car2 = ("Toyota", 2025, "Venza", "Black")
+
+car1.drive()
+car2.drive()
+
+
+// console.log(car1.model)
+// console.log(car1.year)
+// console.log(car1.color)
+// console.log(car1.make)
+
+
+// console.log(car2.model)
+// console.log(car2.year)
+// console.log(car2.color)
+// console.log(car2.make)

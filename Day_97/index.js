@@ -62,3 +62,15 @@ function rollDice(){
 
     }, 100) // speed (lower = faster)
 }
+
+
+
+//CONSTRUCTOR IN JAVASCRIPT
+function Car(make, year, model, color){
+    this.make = make,
+    this.year= year,
+    this.model = model,
+    this.color = color
+}
+const car1 = ("Hyundai", 2024, "Sonata", "Grey")
+const car2 = ("Toyota", 2025, "Venza", "Black")

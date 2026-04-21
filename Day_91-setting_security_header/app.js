@@ -1,7 +1,7 @@
 //Import expresss
 const express = require('express');
 
-const CustomError = require('./Utils/CustomError').default
+const CustomError = require('./Utils/CustomError')
 const globalErrorHandler = require('./Controllers/errorController')
 const morgan = require('morgan')
 const rateLimit = require('express-rate-limit')

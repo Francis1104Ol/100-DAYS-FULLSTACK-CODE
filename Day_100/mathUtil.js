@@ -9,6 +9,6 @@ export function getArea(radius){
 }
 
 export function getVolume(radius){
-    return 4 * PI * radius* radius
+    return (4/3) * PI * radius**3
 }
 
